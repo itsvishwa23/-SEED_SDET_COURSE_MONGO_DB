@@ -1,23 +1,51 @@
-show dbs;
-use database (student);
-
+show dbs
+use students;
 db.createCollection("students")
-show dbs;
-
-db.students.insertOne
-({
-        name:"Vishwanath"
-})
 
 
-db.students.insertOne
-({
-        name:"Vishwanath Taware"
-})
+db.students.insertOne({
+        name:"Vishwanath",
+        roll_no:2012131,
+        address:"Pune",
+        hindi_marks:50,
+        english_marks:50,
+        marathi_amrks:50
+      })
 
 
-db.students.find()
+      db.students.insertMany([
+
+
+        {
+        name:"Vishwanath",
+        roll_no:2012131,
+        address:"Pune",
+        hindi_marks:50,
+        english_marks:50,
+        marathi_amrks:50
+        },
+
+        {
+                name:"Vishwanath",
+                roll_no:2012131,
+                address:"Pune",
+                hindi_marks:50,
+                english_marks:50,
+                marathi_amrks:50
+         },
+
+         {
+                        name:"Vishwanath",
+                        roll_no:2012131,
+                        address:"Pune",
+                        hindi_marks:50,
+                        english_marks:50,
+                        marathi_amrks:50
+         },
+
+      ])
 
 
 
-use database (demo);
+      db.students.find()
+      db.students.findOne({name:"Vishwanath"})
