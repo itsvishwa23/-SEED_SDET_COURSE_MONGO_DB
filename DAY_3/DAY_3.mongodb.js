@@ -69,3 +69,4 @@ db.prod.insertMany(
 
     db.prod.find( {catagory:"laptop", $or: [ { "details.RAM": "8GB" },{ "details.Storage": "512GB" }]})
  
+    db.prod.find( { catagory: { $exists: true } } )
