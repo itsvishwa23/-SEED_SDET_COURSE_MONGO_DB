@@ -36,5 +36,3 @@ db.students.find({english_marks:{$exists:true}})
 
 
 db.students.find({english_marks:{$gt:50}})
-
-
