@@ -1,0 +1,1 @@
+db.stationary.find().count()
